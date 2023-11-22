@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Awis</title>
+  <style>
+   
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #8ecae6;
+      color: #333;
+    }
+
+    header {
+      background-color: #264653;
+      color: #fff;
+      padding: 15px 0;
+	height:150%;
+
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #e76f51;
+      border-radius: 8px;
+    }
+
+    .about-me p {
+      font-size: 20em;
+      line-height: 1.6;
+      max-width: 80%;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #2a9d8f;
+      border-radius: 8px;
+    }
+
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hobby-box {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hobby-box:hover {
+      transform: scale(1.1);
+    }
+
+    .hobby-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-size: cover;
+    }
+
+    .hobby-box:hover .hobby-image {
+      opacity: 1;
+    }
+ .hobby-box .hobby-description {
+      color: #fff; 
+    }
+
+    .work {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .work-item {
+      text-align: center;
+      max-width: 200px;
+      padding: 10px;
+    }
+
+    .work-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .work-item p {
+      font-weight: bold;
+      color: #264653;
+    }
+
+    .work-item:hover img {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #2a9d8f;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: auto;
+      width: 100%;
+      height: 80px;
+    }
+
+    .contact-button {
+      padding: 10px 10px;
+      background-color: #f4a261;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #e9c46a;
+    }
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 180px;
+      width:100%;
+      margin: auto;
+    }
+
+    .about-me p {
+      font-size: 1.4em;
+      line-height: 1.7;
+      max-width: 70%;
+    }
+
+    .about-me img {
+      max-width: 40%;
+      border-radius: 8px;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px;
+      max-width: 1200px;
+      margin: auto;
+      border-radius:8px;
+    }
+
+    .video-section iframe {
+      max-width: 50%;
+      height: 300px;
+border-radius:10px;
+margin-left:20px;
+
+    }
+     
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hobby-box {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .hobby-box:hover .hobby-image {
+      opacity: 1;
+    }
+
+    .hobby-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .work {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .work-item {
+      text-align: center;
+    }
+
+    .work-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+ header {
+      background-color: #264653;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.0em; 
+      letter-spacing: 2px; 
+      margin: 0;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+    }
+	
+
+    footer {
+      background-color: #2a9d8f;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0 60px; 
+      
+    }
+
+   
+    .hobby-description {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="awis.html">Awis</a></li>
+        <li><a href="asim.html">Asim</a></li>
+        <li><a href="ameer.html">Ameer</a></li>
+        <li><a href="mohammed.html">Mohammed</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-me" id="about-me">
+    <div>
+      <h2>About me</h2>
+      <p>Hey there, I'm Awis Anadani, a University of Sharjah IT multimedia student. Balancing a passion for academics and sports keeps my days vibrant. I thrive on trying new things and connecting with diverse people. Always eager to learn, I embrace every opportunity to expand my knowledge and skills. Let's connect and explore new horizons together!</p>
+    </div>
+    <img src="https://media.licdn.com/dms/image/D4E03AQGW2EL18G7w6w/profile-displayphoto-shrink_800_800/0/1679340897342?e=1706140800&v=beta&t=13xlHle5OJEkEU6Mdlv4nG1nJX7QolJS1CrnONGdMOw" alt="Your Image">
+  </section>
+
+  <section class="video-section" id="intro-video">
+<h2>Introductory Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Avm2LT6w9AA" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="hobbies" id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobby-box" style="background-image: url('https://img.olympics.com/images/image/private/t_s_w1340/t_s_16_9_g_auto/f_auto/v1536936974/primary/exvzqcvorticinejmmel');">
+      <div class="hobby-description">Volleyball</div>
+    </div>
+
+    <div class="hobby-box" style="background-image: url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1957&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <div class="hobby-description">Video Games</div>
+    </div>
+    
+    <div class="hobby-box" style="background-image: url('https://th.bing.com/th/id/OIP.ziqWXaNFwvqws6k1Y6X33AHaEK?rs=1&pid=ImgDetMain');">
+      <div class="hobby-description">Escape rooms</div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+<h2>work</h2>
+    <div class="work-item">
+      <img src="https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Research Assistant">
+      <p>Research Assistant</p>
+    </div>
+    <div class="work-item">
+      <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFzc2lzdGFudHxlbnwwfDB8MHx8fDA%3D" alt="Registration Department">
+      <p>Registration Department</p>
+    </div>
+    <div class="work-item">
+      <img src="https://th.bing.com/th/id/OIP.AiUToNy_3XdEIxO1yxrbCgAAAA?rs=1&pid=ImgDetMain" alt="Publishing Assistant">
+      <p>Publishing Assistant</p>
+    </div>
+  </section>
+
+   <footer>
+    <p>Copyrights of group 5 reserved @ 2023</p>
+    <p>Connect with me on LinkedIn ! <a href="https://www.linkedin.com/in/awis-anadani-9089071b6/" class="contact-button">Connect</a>
+      <br><br>
+      <a href="mailto:group5@sharjah.ac.ae" class="contact-button">Contact Us</a>
+    </p>
+  </footer>
+</body>
+</html>
