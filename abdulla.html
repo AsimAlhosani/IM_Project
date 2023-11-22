@@ -16,7 +16,8 @@
     header {
       background-color: #264653;
       color: #fff;
-      padding: 10px 0;
+      padding: 15px 0;
+	  height:150%;
     }
 
     nav ul {
@@ -90,8 +91,31 @@
       background-color: #E9C46A;
     }
   </style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
 </head>
-<body>
+<body onLoad="MM_preloadImages('images/skiing.jpeg')">
   <header>
     <nav>
       <ul>
@@ -102,24 +126,25 @@
         <li><a href="abdulla.html">Abdulla</a></li>
       </ul>
     </nav>
-  </header>
+</header>
 <section class="intro">
   <div>
       <h1>Welcome to My page!</h1>
       
 	<p>I am Abdulla, IT Multimedia Student In Univercity Of Sharjah!</p>
   </div>
-  <img src="images/coding.jpg" alt="Group Image">
+  <img src="images/coding.jpg?size=690:388" alt="Group Image">
   </section><h2>About me</h2>
-<section class="article">My name is Abdulla saeed alzahmi, and I come from the  city of Ras Al Khaimah. Currently, I am a second-year student at the University of Sharjah, majoring in IT Multimedia. I chose this field because I've always been fascinated by computers and wanted to understand how they work.&nbsp;</section>
+<section class="article">My name is Abdulla saeed alzahmi, and I come from the  city of Ras Al Khaimah. Currently, I am a second-year student at the University of Sharjah, majoring in IT Multimedia. I chose this field because I've always been fascinated by computers and wanted to understand how they work.</section>
 <iframe width="790" height="500" src="https://www.youtube.com/embed/5-dLQg_eZK0?si=cvwfdSaOz6BKt28L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h3>My Hobbies</h3>
-<img src="images/swimming.jpeg" width="1440" height="900" alt=""/>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Rolling image','','images/skiing.jpeg',1)"><img src="images/swimming.jpeg" alt="Rolling from Swimming to Skiing" width="450" height="279" id="Rolling image"></a>
 <article class="abdulla">
-Outside of my studies, you'll often find me enjoying activities like swimming, skiing, and exploring the world of coding as a hobby. My journey into the world of programming started with a specific moment that ignited my curiosityn an experience that showed me the limitless possibilities that coding offers.My hobbies, surprisingly, have a profound connection with my studies. Whether it's the discipline and focus required in swimming and skiing or the creativity and problem-solving aspects of coding, each facet complements the other, providing me with a holistic approach to learning and growth.
- </article>
+  Outside of my studies, you'll often find me enjoying activities like swimming, skiing, and exploring the world of coding as a hobby. My journey into the world of programming started with a specific moment that ignited my curiosityn an experience that showed me the limitless possibilities that coding offers.My hobbies, surprisingly, have a profound connection with my studies. Whether it's the discipline and focus required in swimming and skiing or the creativity and problem-solving aspects of coding, each facet complements the other, providing me with a holistic approach to learning and growth.
+</article>
 
 
   <footer>
+	  <p>All Rights Reserved &copy; 2023</p>
     <a href="U21200614@sharjah.ac.ae" class="contact-button">Contact Me</a>
   </footer>
 </body>
