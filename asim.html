@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Awis</title>
+  <style>
+   
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #8ecae6;
+      color: #333;
+    }
+
+    header {
+      background-color: #264653;
+      color: #fff;
+      padding: 15px 0;
+	height:150%;
+
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #e76f51;
+      border-radius: 8px;
+    }
+
+    .about-me p {
+      font-size: 20em;
+      line-height: 1.6;
+      max-width: 80%;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #2a9d8f;
+      border-radius: 8px;
+    }
+
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hobby-box {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hobby-box:hover {
+      transform: scale(1.1);
+    }
+
+    .hobby-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      background-size: cover;
+    }
+
+    .hobby-box:hover .hobby-image {
+      opacity: 1;
+    }
+ .hobby-box .hobby-description {
+      color: #fff; 
+    }
+
+    .work {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .work-item {
+      text-align: center;
+      max-width: 200px;
+      padding: 10px;
+    }
+
+    .work-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .work-item p {
+      font-weight: bold;
+      color: #264653;
+    }
+
+    .work-item:hover img {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #2a9d8f;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: auto;
+      width: 100%;
+      height: 80px;
+    }
+
+    .contact-button {
+      padding: 10px 10px;
+      background-color: #f4a261;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #e9c46a;
+    }
+    .about-me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 180px;
+      width:100%;
+      margin: auto;
+    }
+
+    .about-me p {
+      font-size: 1.4em;
+      line-height: 1.7;
+      max-width: 70%;
+    }
+
+    .about-me img {
+      max-width: 40%;
+      border-radius: 8px;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px;
+      max-width: 1200px;
+      margin: auto;
+      border-radius:8px;
+    }
+
+    .video-section iframe {
+      max-width: 50%;
+      height: 300px;
+border-radius:10px;
+margin-left:20px;
+
+    }
+     
+    .hobbies {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hobby-box {
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .hobby-box:hover .hobby-image {
+      opacity: 1;
+    }
+
+    .hobby-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .work {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .work-item {
+      text-align: center;
+    }
+
+    .work-item img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+ header {
+      background-color: #264653;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.0em; 
+      letter-spacing: 2px; 
+      margin: 0;
+    }
+
+    .video-section {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+    }
+	
+
+    footer {
+      background-color: #2a9d8f;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0 60px; 
+      
+    }
+
+   
+    .hobby-description {
+      text-align: center;
+      font-size: 1em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="awis.html">Awis</a></li>
+        <li><a href="asim.html">Asim</a></li>
+        <li><a href="ameer.html">Ameer</a></li>
+        <li><a href="abdulla.html">Abdulla</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-me" id="about-me">
+    <div>
+      <h2>About me</h2>
+      <p>Hello, my name is Asim Khalid Alhosani and I am a student in the University of Sharjah, I'm majoring in IT - Multimedia because my love for computers has been a constant in my life. Ever since I can remember, I've been drawn to the world of technology, and I just wanted to be around computers all the time. Choosing IT - Multimedia is a natural extension of my passion. I enjoy exploring graphic design, video editing, and various aspects of multimedia production. This major allows me to combine my technical skills with creative expression. I see it as a way to bridge the gap between technology and art, making information more engaging and accessible in our increasingly digital world.</p>
+    </div>
+  </section>
+
+  <section class="video-section" id="intro-video">
+<h2>Introductory Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XnhvIOyPviQ" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="hobbies" id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobby-box" style="background-image: url(images/videogames.jpg);">
+      <div class="hobby-description">Video Games</div>
+    </div>
+
+    <div class="hobby-box" style="background-image: url(images/chicken-biryani.jpg);">
+      <div class="hobby-description">Eating</div>
+    </div>
+    
+    <div class="hobby-box" style="background-image: url(images/sleep.png);">
+      <div class="hobby-description">Sleeping</div>
+    </div>
+  </section>
+   <footer>
+    <p>All Rights Reserved &copy; 2023</p>
+    <p>
+      <br><br>
+      <a href="mailto:u22103637@sharjah.ac.ae" class="contact-button">Contact Me</a>
+    </p>
+  </footer>
+</body>
+</html>
